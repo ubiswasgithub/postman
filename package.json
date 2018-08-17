@@ -6,7 +6,8 @@
     "test": "tests"
   },
   "scripts": {
-    "api-test-qa": "newman run tests/Collection1.postman_collection.json -e tests/QA.postman_environment.json --reporters junit --reporter-junit-export newman.xml"
+    "api-test-qa": "newman run tests/Collection1.postman_collection.json -e tests/QA.postman_environment.json --reporters junit --reporter-junit-export newman.xml",
+ "api-test-dev": "newman run tests/Collection2.postman_collection.json -e tests/dev.postman_environment.json --reporters junit --reporter-junit-export newman1.xml" 
   },
   "author": "Uttam", 
   "dependencies": {
