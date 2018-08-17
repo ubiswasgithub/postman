@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "e5fa4cc2-76e1-4342-9643-d3efd7a9792a",
+		"name": "Collection2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET",
+			"item": [
+				{
+					"name": "GET User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "37d6a972-a54d-4e20-b22b-62220531dbfa",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/{{endpointsingluser}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{endpointsingluser}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET User List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "25ad80cd-2b45-4f46-a4a9-aa5db937b08f",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/{{endpointsingluser}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{endpointsingluser}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "POST",
+			"item": [
+				{
+					"name": "POST Create User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e9829da4-e69e-4ab5-aab2-05480914f6ee",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "name",
+								"value": "morpheus"
+							},
+							{
+								"key": "job",
+								"value": "leader"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/{{endpointcreateuser}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{endpointcreateuser}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST User Registration",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e9829da4-e69e-4ab5-aab2-05480914f6ee",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 201\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{password}}\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/{{endpointregister}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{endpointregister}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST User Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6a6269ea-fdc1-492d-a0cf-2b0d0531e5d5",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"peter@klaven\",\r\n    \"password\": \"cityslicka\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}/{{endpointluserogin}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{endpointluserogin}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PUT",
+			"item": [
+				{
+					"name": "PUT Update User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "67a16c9c-dc83-4333-882b-a4c4607f8426",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "name",
+								"value": "morpheus"
+							},
+							{
+								"key": "job",
+								"value": "zion resident"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/{{endpointupdateuser}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{endpointupdateuser}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "DELETE",
+			"item": [
+				{
+					"name": "DELETE User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d044c012-853b-48f6-b4c5-7267b489cc48",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{url}}/{{endpointdeleteuser}}",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"{{endpointdeleteuser}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
